@@ -9,18 +9,31 @@
         android:targetSdkVersion="19" />
 
     <application
+        android:name="com.mix.utils.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.mixtest.MainActivity"
+            android:name="com.mix.activity.StartActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.mix.activity.MainActivity">            
+        </activity>
+        <activity 
+            android:name="com.mix.activity.SignUpActivity">            
+        </activity>
+        <activity 
+            android:name="com.mix.activity.SignInActivity">            
+        </activity>
+        <activity 
+            android:name="com.mix.activity.AdActivity">            
         </activity>
     </application>
 
