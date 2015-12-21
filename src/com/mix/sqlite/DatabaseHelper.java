@@ -15,6 +15,13 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 			+ "username text, "
 			+ "password text)";
 	
+	public static final String CREATE_DIARY = "create table Diary ("
+			+ "id integer primary key autoincrement, "
+			+ "diary_title text, "
+			+ "diary_secondtitle text, "
+			+ "diary_content text, "
+			+ "diary_picture blob)";
+	
 	private Context mcontext;
 
 	public DatabaseHelper(Context context, String name, CursorFactory factory,
@@ -26,13 +33,21 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL(CREATE_USER);
+		db.execSQL(CREATE_DIARY);
 		Toast.makeText(MyApplication.getContext(), "我不告诉你我搞了一个SQLite~", Toast.LENGTH_LONG);
 		
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		
+		switch (oldVersion) {
+		case 1:
+			db.execSQL(CREATE_DIARY);
+			break;
+
+		default:
+			break;
+		}
 	}
 
 }

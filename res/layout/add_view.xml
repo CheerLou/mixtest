@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+        
+        
+    <EditText 
+        android:id="@+id/id_add_title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="标题"/>
+    
+    <EditText 
+        android:id="@+id/id_add_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="副标题"/>
+    
+    <EditText 
+        android:id="@+id/id_add_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="内容"/>
+    
+    <Button 
+        android:id="@+id/id_add_button_addpic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="上传图片"/>
+    
+    <ImageView 
+        android:id="@+id/id_add_showpic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <Button 
+        android:id="@+id/id_add_button_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="上传你的游记~"
+        android:background="#3399cc"
+        android:textColor="#ffffff"/>
+        
+    </LinearLayout>    
+    
+    </ScrollView>
+    

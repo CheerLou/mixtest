@@ -34,7 +34,7 @@ public class SignUpActivity extends Activity{
 		usernameEditText = (EditText) findViewById(R.id.id_register_username);
 		passwordEditText = (EditText) findViewById(R.id.id_register_password);
 		registerButton = (Button) findViewById(R.id.id_register_button);
-		dbHelper = new DatabaseHelper(this, "UserInformation.db", null, 1);
+		dbHelper = new DatabaseHelper(this, "UserInformation.db", null, 2);
 		//判断用户名是否被占用，占用则使用TextView提示用户更改
 		dbHelper.getWritableDatabase();
 		final SQLiteDatabase db = dbHelper.getWritableDatabase();

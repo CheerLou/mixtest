@@ -70,7 +70,7 @@ public class SignInActivity extends Activity{
 			rememberCheckBox.setChecked(true);
 		}
 		//初始化SQLite
-		dbHelper = new DatabaseHelper(this, "UserInformation.db", null, 1);
+		dbHelper = new DatabaseHelper(this, "UserInformation.db", null, 2);
 		dbHelper.getWritableDatabase();
 		final SQLiteDatabase db = dbHelper.getWritableDatabase();
 		//设置登录键的点击事件

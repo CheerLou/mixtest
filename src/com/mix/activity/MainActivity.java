@@ -1,5 +1,6 @@
 package com.mix.activity;
 
+import java.io.FileNotFoundException;
 import java.security.Provider;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,8 @@ import android.app.Activity;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -226,4 +229,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		}
     	
     }
+    
+    
 }
