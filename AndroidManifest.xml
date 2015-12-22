@@ -36,6 +36,9 @@
         <activity 
             android:name="com.mix.activity.AdActivity">            
         </activity>
+        <activity 
+            android:name="com.mix.activity.DiaryContentActivity">            
+        </activity>
     </application>
 
 </manifest>

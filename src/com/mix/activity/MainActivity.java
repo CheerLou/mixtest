@@ -131,7 +131,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
     	mFragments.add(mTab04);
     	
     	mFragmentPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
-			
+
 			@Override
 			public int getCount() {
 				return mFragments.size();

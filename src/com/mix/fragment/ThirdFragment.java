@@ -78,7 +78,6 @@ public class ThirdFragment extends Fragment{
 		
 		dbHelper = new DatabaseHelper(MyApplication.getContext(), "UserInformation.db", null, 2);
 		dbHelper.getWritableDatabase();
-		final SQLiteDatabase db = dbHelper.getWritableDatabase();
 		saveButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -91,14 +90,20 @@ public class ThirdFragment extends Fragment{
 				values.put("diary_secondtitle", title2);
 				values.put("diary_content", content);
 				
-				ByteArrayOutputStream os = new ByteArrayOutputStream();   
-				bmp.compress(Bitmap.CompressFormat.PNG, 100, os);    
-				values.put("diary_picture", os.toByteArray());  
+				ByteArrayOutputStream os = new ByteArrayOutputStream(); 
+				if(bmp != null){
+					bmp.compress(Bitmap.CompressFormat.PNG, 100, os);  
+				}  
+				values.put("diary_picture", os.toByteArray());
+				SQLiteDatabase db = dbHelper.getWritableDatabase();
 				db.insert("Diary", null, values);
 				values.clear();
 				Toast.makeText(MyApplication.getContext(),"上传成功！", Toast.LENGTH_LONG).show();
 				db.close();
-				
+				titleEditText.setText("");
+				secondtitleEditText.setText("");
+				contentEditText.setText("");
+				picImageView.setImageBitmap(null);
 			}
 		});
 
