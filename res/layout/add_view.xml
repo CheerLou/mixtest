@@ -28,7 +28,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:hint="内容"/>
+        android:inputType="textMultiLine"
+        android:minLines="5"
+        android:hint="内容"
+        android:gravity="top|left"/>
     
     <Button 
         android:id="@+id/id_add_button_addpic"

@@ -9,6 +9,7 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 import com.example.mixtest.R;
+import com.mix.activity.MainActivity;
 import com.mix.sqlite.DatabaseHelper;
 import com.mix.utils.MyApplication;
 
@@ -43,7 +44,7 @@ public class ThirdFragment extends Fragment{
 	private Button saveButton;
 	private ImageView picImageView;
 	
-	private Uri imageUri;
+//	private Uri imageUri;
 
     private String imgName = "";
 	
@@ -75,7 +76,6 @@ public class ThirdFragment extends Fragment{
 				
 			}
 		});
-		
 		dbHelper = new DatabaseHelper(MyApplication.getContext(), "UserInformation.db", null, 2);
 		dbHelper.getWritableDatabase();
 		saveButton.setOnClickListener(new OnClickListener() {

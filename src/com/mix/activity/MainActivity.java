@@ -48,16 +48,18 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	private LinearLayout mTabFirstLayout;
 	private LinearLayout mTabSecondLayout;
 	private LinearLayout mTabThirdLayout;
-	private LinearLayout mTabFourthLayout;
+//	private LinearLayout mTabFourthLayout;
 	
 	private ImageButton mImgFirst;
 	private ImageButton mImgSecond;
 	private ImageButton mImgThird;
-	private ImageButton mImgFourth;
+//	private ImageButton mImgFourth;
 	
 	private ImageButton mImgSettings;
 	
 	private long exitTime;
+	
+	private String tag_02;
 	
 	protected SharedPreferences pref;
 	protected SharedPreferences.Editor editor;
@@ -69,6 +71,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
         setContentView(R.layout.activity_main);
         initView();
         initEvent();
+        getTag02();
         
         pref = PreferenceManager.getDefaultSharedPreferences(this);
         mImgSettings = (ImageButton) findViewById(R.id.settings);
@@ -103,6 +106,10 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			finish();
 		}
 	}
+    
+    public String getTag02(){
+    	return tag_02;
+    }
 
 	//退出程序销毁，不销毁。后退一次提示toast,后退两次退出程序
    
@@ -111,12 +118,12 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
     	mTabFirstLayout = (LinearLayout) findViewById(R.id.id_tab_first);
     	mTabSecondLayout = (LinearLayout) findViewById(R.id.id_tab_second);
     	mTabThirdLayout = (LinearLayout) findViewById(R.id.id_tab_third);
-    	mTabFourthLayout = (LinearLayout) findViewById(R.id.id_tab_fourth);
+//    	mTabFourthLayout = (LinearLayout) findViewById(R.id.id_tab_fourth);
     	
     	mImgFirst = (ImageButton) findViewById(R.id.id_tab_button_first);
     	mImgSecond = (ImageButton) findViewById(R.id.id_tab_button_second);
     	mImgThird = (ImageButton) findViewById(R.id.id_tab_button_third);
-    	mImgFourth = (ImageButton) findViewById(R.id.id_tab_button_fourth);
+//    	mImgFourth = (ImageButton) findViewById(R.id.id_tab_button_fourth);
     	
     	mViewPager = (ViewPager) findViewById(R.id.viewpager);
     	
@@ -124,11 +131,13 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
     	Fragment mTab01 = new FirstFragment();
     	Fragment mTab02 = new SecondFragment();
     	Fragment mTab03 = new ThirdFragment();
-    	Fragment mTab04 = new FourthFragment();
+ //   	Fragment mTab04 = new FourthFragment();
+    	tag_02 = mTab02.getTag();
+    	
     	mFragments.add(mTab01);
     	mFragments.add(mTab02);
     	mFragments.add(mTab03);
-    	mFragments.add(mTab04);
+ //   	mFragments.add(mTab04);
     	
     	mFragmentPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
 
@@ -173,7 +182,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
     	mTabFirstLayout.setOnClickListener(this);
     	mTabSecondLayout.setOnClickListener(this);
     	mTabThirdLayout.setOnClickListener(this);
-    	mTabFourthLayout.setOnClickListener(this);
+//    	mTabFourthLayout.setOnClickListener(this);
     }
     
     private void setTab(int i){
@@ -188,9 +197,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		case 2:
 			mImgThird.setImageResource(R.drawable.ic_launcher_red);
 			break;
-		case 3:
-			mImgFourth.setImageResource(R.drawable.ic_launcher_red);
-			break;
+//		case 3:
+//			mImgFourth.setImageResource(R.drawable.ic_launcher_red);
+//			break;
 		default:
 			break;
 		}
@@ -200,7 +209,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
     	mImgFirst.setImageResource(R.drawable.ic_launcher);
     	mImgSecond.setImageResource(R.drawable.ic_launcher);
     	mImgThird.setImageResource(R.drawable.ic_launcher);
-    	mImgFourth.setImageResource(R.drawable.ic_launcher);
+//    	mImgFourth.setImageResource(R.drawable.ic_launcher);
     	
     }
     
@@ -221,9 +230,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		case R.id.id_tab_third:
 			setSelect(2);
 			break;
-		case R.id.id_tab_fourth:
-			setSelect(3);
-			break;
+//		case R.id.id_tab_fourth:
+//			setSelect(3);
+//			break;
 		default:
 			break;
 		}

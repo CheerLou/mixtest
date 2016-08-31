@@ -1,12 +1,15 @@
 package com.mix.adapter;
 
-import java.io.ByteArrayInputStream;
+import java.util.ArrayList;
 import java.util.List;
+
+
 
 import com.example.mixtest.R;
 import com.mix.bean.Diary;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,8 +26,13 @@ public class ListViewAdapter extends BaseAdapter{
 	public ListViewAdapter(Context context, List<Diary> data){
 		mList = data;
 		mInflater = LayoutInflater.from(context);
-		
 	}
+	
+	public void onDateChange(List<Diary> mList) {
+		this.mList = mList;
+		this.notifyDataSetChanged();
+	}
+	
 	@Override
 	public int getCount() {
 		return mList.size();

@@ -86,7 +86,7 @@
         
     </LinearLayout>
     
-      <LinearLayout 
+<!--     <LinearLayout 
         android:id="@+id/id_tab_fourth"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
@@ -111,6 +111,6 @@
         
         
     </LinearLayout>
-    
+     --> 
 
 </LinearLayout>
