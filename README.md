@@ -1,2 +1,2 @@
 # mixtest
-Practice for most thing got last 3 months,including Tab(viewpager+fragment),fragment,handler,listview,broadcast,SQLite,sharedpreference,JSON,SMS,photo,sensor,LBS,customized  view……
+MixTest is a travel journal APP demo.It has SignIn and SignUp Activity. The Home has a Tab finishing by viewpager+fragmentPagerAdapter.You can write journal and upload your picture in a fragment.In another fragment shows with a listview and you can click on item to see the whole journal and picture.You can also pull to reflash the listview after you add a new journal.A long click will delete the journal if you want.
